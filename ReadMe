@@ -23,3 +23,15 @@ source ~/tensorflow/bin/activate.csh  # If using csh or tcsh
  pip3 install --upgrade tensorflow     # for Python 3.n
  pip install --upgrade tensorflow-gpu  # for Python 2.7 and GPU
  pip3 install --upgrade tensorflow-gpu # for Python 3.n and GPU 
+
+
+
+
+#### openAI gym####
+
+git clone https://github.com/openai/gym
+cd gym
+pip install -e .[all]
+pip install gym[all]
+pip install gym
+pip install -e . # minimal install
