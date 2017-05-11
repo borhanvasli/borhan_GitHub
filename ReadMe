@@ -35,3 +35,12 @@ pip install -e .[all]
 pip install gym[all]
 pip install gym
 pip install -e . # minimal install
+
+
+
+#### git hub #####
+git clone the url
+git add .
+git commit -m "your comment"
+git push (origin master)
+git pull
