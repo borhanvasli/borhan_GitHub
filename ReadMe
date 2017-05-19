@@ -6,6 +6,23 @@ free space --> + --> primary + begining of this space --> swap area ( 64GB )
 free space --> + --> logical + begining of this space --> Ext4 + /  ( 300GB )
 free space --> + --> logical + begining of this space --> Ext4 +/home( 500GB )
 
+
+#### chrome ####
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+
+sudo apt-get update 
+sudo apt-get install google-chrome-stable
+
+#sublim 
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+
+
+### other####
+sudo apt inistall git
+
 #### openAI gym####
 
 git clone https://github.com/openai/gym
@@ -47,6 +64,9 @@ pip install -e . # minimal install
 
 
 #### git hub #####
+git config --global user.email "borhanvasli@gmail.com" 
+git config --global user.name "borhanvasli"
+
 git clone the url
 git add .
 git commit -m "your comment"
