@@ -1,3 +1,11 @@
+### ubunto inistalllation partitioning#####
+something else
+/dev/sda    -->		New Partition Table
+free space --> + --> primary + begining of this space --> swap area ( 64GB )
+
+free space --> + --> logical + begining of this space --> Ext4 + /  ( 300GB )
+free space --> + --> logical + begining of this space --> Ext4 +/home( 500GB )
+
 #### openAI gym####
 
 git clone https://github.com/openai/gym
