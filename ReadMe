@@ -20,9 +20,6 @@ sudo apt-get update
 sudo apt-get install sublime-text-installer
 
 
-### other####
-sudo apt inistall git
-
 #### openAI gym####
 
 git clone https://github.com/openai/gym
@@ -51,19 +48,8 @@ source ~/tensorflow/bin/activate.csh  # If using csh or tcsh
 
 
 
-
-#### openAI gym####
-
-git clone https://github.com/openai/gym
-cd gym
-pip install -e .[all]
-pip install gym[all]
-pip install gym
-pip install -e . # minimal install
-
-
-
 #### git hub #####
+sudo apt inistall git
 git config --global user.email "borhanvasli@gmail.com" 
 git config --global user.name "borhanvasli"
 
@@ -72,3 +58,55 @@ git add .
 git commit -m "your comment"
 git push (origin master)
 git pull
+
+
+#### INSTALL anaconda######
+https://www.continuum.io/downloads
+bash Anaconda2-4.3.1-Linux-x86_64.sh 
+
+##### UNISTALL ANACONDA #######
+conda install anaconda-clean   # install the package anaconda clean
+anaconda-clean --yes           # clean all anaconda related files and directories 
+rm -rf ~/anaconda3             # removes the entire anaconda directory
+rm -rf ~/.anaconda_backup  
+
+
+##### nvidia toolkit #####
+sudo apt install nvidia-cuda-toolkit
+nvcc --version
+
+##### nvidia cuda #####
+https://developer.nvidia.com/cuda-downloads
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda
+
+#### nvidia Cudnn #####
+https://developer.nvidia.com/rdp/cudnn-download
+#bavsli@ucsd.edu -->and pass
+#unzip
+sudo cp cuda/lib64/lib* /usr/local/cuda/lib64/
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
+
+
+
+### tensorflow with GPU #####
+conda remove --name tensorflow --all			--> remove envirenmetn
+
+
+conda create -n tensorflow python=2.7
+source activate tensorflow
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0-cp27-none-linux_x86_64.whl
+pip install --ignore-installed --upgrade $TF_BINARY_URL
+
+conda install ipython
+
+
+
+
+######
+
+
+#### other ####
+
+sudo subl ~/.bashrc
